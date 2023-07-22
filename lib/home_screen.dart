@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:namaz_app/features/hijri%20date/screens/hijri_date.dart';
-import 'package:namaz_app/features/namaz%20time/screens/namaz_time.dart';
+import 'package:namaz_app/features/namaz%20time/screens/namaz_time_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

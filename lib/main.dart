@@ -7,6 +7,16 @@ void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
+final scaffoldMessengerKeyPod = Provider((ref) {
+  return GlobalKey<ScaffoldMessengerState>();
+});
+
+/// Returns the scaffold messenger associated with [scaffoldMessengerKeyPod].
+///
+final scaffoldMessengerPod = Provider((ref) {
+  return ref.watch(scaffoldMessengerKeyPod).currentState!;
+});
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

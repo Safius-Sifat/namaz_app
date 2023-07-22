@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void showSnackBar(BuildContext context, String text) {
-  ScaffoldMessenger.of(context)
+import '../main.dart';
+
+void showSnackBar(Ref ref, String text) {
+  final scaffoldMessenger = ref.read(scaffoldMessengerPod);
+  scaffoldMessenger
     ..hideCurrentSnackBar()
     ..showSnackBar(
       SnackBar(
