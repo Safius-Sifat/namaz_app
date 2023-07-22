@@ -1,16 +1,14 @@
-# namaz_app
+# Task 1.1: Namaz App
 
-A new Flutter project.
+A  Flutter recruitment project fot the Gizantech.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Here is the apk download link for the Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Namaz App.apk](https://github.com/Safius-Sifat/namaz_app/releases/download/latest/Namaz-App.apk)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Thanks for letting me have the opportunity. Looking forward to hear from you again.
