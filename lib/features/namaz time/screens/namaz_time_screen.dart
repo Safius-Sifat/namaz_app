@@ -33,127 +33,122 @@ class NamazTime extends ConsumerWidget {
       ),
       body: data.when(
           data: (data) {
-            return Column(
-              children: [
-                Text("${dateTime}"),
-                ElevatedButton(
-                  onPressed: () {
-                    showDateTimePicker(context, ref);
-                  },
-                  child: const Text("Select Date"),
-                ),
-                Expanded(
-                  child: ListView(children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data![dateTime.day - 1].timings!.fajr ?? "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Fajr"),
-                      ),
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                    "${dateTime.day}-0${dateTime.month}-${dateTime.year}",
+                    style: const TextStyle(fontSize: 24.0),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      showDateTimePicker(context, ref);
+                    },
+                    child: const Text("Select Date"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data![dateTime.day - 1].timings!.fajr ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Fajr"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.sunrise ??
-                                "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Sunrise"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.sunrise ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Sunrise"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.dhuhr ?? "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Dhuhr"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.dhuhr ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Dhuhr"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.asr ?? "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Asr"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.asr ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Asr"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(data[dateTime.day - 1].timings!.sunset ??
-                            "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Sunset"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.sunset ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Sunset"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.maghrib ??
-                                "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Maghrib"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.maghrib ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Maghrib"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.isha ?? "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Isha"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.isha ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Isha"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.imsak ?? "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Imsak"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.imsak ?? "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Imsak"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.midnight ??
-                                "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Midnight"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(data[dateTime.day - 1].timings!.midnight ??
+                          "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Midnight"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.firstthird ??
-                                "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Firstthird"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.firstthird ??
+                              "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("First third"),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: ListTile(
-                        trailing: Text(
-                            data[dateTime.day - 1].timings!.lastthird ??
-                                "No data"),
-                        tileColor: Colors.deepPurple[200],
-                        title: const Text("Lastthird"),
-                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ListTile(
+                      trailing: Text(
+                          data[dateTime.day - 1].timings!.lastthird ??
+                              "No data"),
+                      tileColor: Colors.deepPurple[200],
+                      title: const Text("Last third"),
                     ),
-                  ]
-                      // data[index].date!.gregorian!.day == dateTime.day;
-
-                      ),
-                )
-              ],
+                  )
+                ],
+              ),
             );
           },
           error: (error, stackTrace) => ErrorText(error: error.toString()),
