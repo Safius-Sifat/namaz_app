@@ -252,8 +252,8 @@ class Hijri {
   String? date;
   String? format;
   String? day;
-  Weekday? weekday;
-  Month? month;
+  HijriWeekday? weekday;
+  HijriMonth? month;
   String? year;
   Designation? designation;
   List<String>? holidays;
@@ -273,8 +273,8 @@ class Hijri {
     format = json['format'];
     day = json['day'];
     weekday =
-        json['weekday'] != null ? Weekday.fromJson(json['weekday']) : null;
-    month = json['month'] != null ? Month.fromJson(json['month']) : null;
+        json['weekday'] != null ? HijriWeekday.fromJson(json['weekday']) : null;
+    month = json['month'] != null ? HijriMonth.fromJson(json['month']) : null;
     year = json['year'];
     designation = json['designation'] != null
         ? Designation.fromJson(json['designation'])

@@ -37,7 +37,7 @@ class NamazTime extends ConsumerWidget {
               child: Column(
                 children: [
                   Text(
-                    "${dateTime.day}-0${dateTime.month}-${dateTime.year}",
+                    "${data![dateTime.day - 1].date!.readable}",
                     style: const TextStyle(fontSize: 24.0),
                   ),
                   ElevatedButton(
@@ -50,7 +50,7 @@ class NamazTime extends ConsumerWidget {
                     padding: const EdgeInsets.all(8),
                     child: ListTile(
                       trailing: Text(
-                          data![dateTime.day - 1].timings!.fajr ?? "No data"),
+                          data[dateTime.day - 1].timings!.fajr ?? "No data"),
                       tileColor: Colors.deepPurple[200],
                       title: const Text("Fajr"),
                     ),
